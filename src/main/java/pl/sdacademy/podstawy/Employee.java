@@ -1,6 +1,7 @@
 package pl.sdacademy.podstawy;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Employee {
     private final String firstName;
@@ -34,8 +35,15 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
     public String toString() {
         return firstName + " " + lastName;
+    }
+
+    public boolean isRetired(LocalDate referenceDate, Country country) {
+        Period agePeriod = Period.between(birthDate, referenceDate);
+        int age = agePeriod.getYears();
+        int retireAge = country.getRetirementAge();
+
+        return age >= retireAge;
     }
 }

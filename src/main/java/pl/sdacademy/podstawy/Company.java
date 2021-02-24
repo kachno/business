@@ -1,5 +1,8 @@
 package pl.sdacademy.podstawy;
 
+import java.time.LocalDate;
+import java.util.Arrays;
+
 public class Company {
     private final Country country;
     private final String companyName;
@@ -31,5 +34,17 @@ public class Company {
 
     public String toString() {
         return companyName;
+    }
+
+    public Employee[] getRetiredEmployees(LocalDate localDate) {
+        Employee[] retiredEmployees = new Employee[employees.length];
+        int counter = 0;
+        for (Employee employee : employees) {
+            if (employee.isRetired(localDate, country)) {
+                retiredEmployees[counter] = employee;
+                counter++;
+            }
+        }
+        return Arrays.copyOf(retiredEmployees, counter);
     }
 }
