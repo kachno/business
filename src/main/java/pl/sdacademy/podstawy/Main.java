@@ -39,7 +39,7 @@ public class Main {
         }
 
         for (Company company : new Company[]{terravita, volkswagen}) {
-           company.raise(900);
+            company.raise(900);
         }
     }
 }
