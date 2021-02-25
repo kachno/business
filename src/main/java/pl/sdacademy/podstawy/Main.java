@@ -8,8 +8,9 @@ public class Main {
 
         Country poland = new Country(65, "Poland");
         Country germany = new Country(67, "Germany");
+        Country japan = Country.fromName("Japan");
 
-        for (Country country : new Country[]{poland, germany}) {
+        for (Country country : new Country[]{poland, germany, japan}) {
             System.out.println(country);
         }
 
