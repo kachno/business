@@ -1,5 +1,6 @@
 package pl.sdacademy.podstawy;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
 
@@ -56,9 +57,9 @@ public class Company {
         return getRetiredEmployees(LocalDate.parse(date));
     }
 
-    public void raise(double payRaise) {
+    public void raise(BigDecimal payRaise) {
         for (Employee employee : employees) {
-            employee.setSalary(employee.getSalary() + payRaise);
+            employee.raise(payRaise);
         }
     }
 }

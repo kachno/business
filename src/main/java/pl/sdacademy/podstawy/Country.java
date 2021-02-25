@@ -21,4 +21,4 @@ public class Country {
         return countryName;
     }
 }
-// klasa niemodowalna
+// klasa niemutowalna

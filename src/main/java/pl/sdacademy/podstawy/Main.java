@@ -1,5 +1,6 @@
 package pl.sdacademy.podstawy;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Main {
@@ -39,7 +40,7 @@ public class Main {
         }
 
         for (Company company : new Company[]{terravita, volkswagen}) {
-            company.raise(900);
+            company.raise(new BigDecimal("100.5"));
         }
     }
 }
